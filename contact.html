@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="contact-form">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Message:</label>
+      <textarea name="message"></textarea>
+
+      <button type="submit">Send</button>
+      <p id="response-message"></p>
+    </form>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = new FormData(form);
+
+        const response = await fetch("https://script.google.com/macros/s/AKfycbxOLPEJ9dKrtQpCSSoM6GT4gqfnSP4-iNWp8WB6biCyJFoqc2NX0bxznt1MFMtQQxuQ/exec", {
+          method: "POST",
+          body: data
+        });
+
+        const message = await response.text();
+        document.getElementById('response-message').textContent = message;
+        form.reset();
+      });
+    </script>
+  </main>
+
+  <footer>
+    <p>© 2025 John & Jane</p>
+  </footer>
+</body>
+</html>
