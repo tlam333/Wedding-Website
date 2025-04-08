@@ -1,0 +1,55 @@
+.brand{
+    border: 5px solid;
+    font-size: 4em;
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.container {
+    margin: 10px;
+}
+
+.sidenav {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+    
+}
+
+.sidenav a {
+    display: block;
+    font-size: 1.8em;
+    font-family: inherit; /* uses the same font as .brand */
+    margin-top: 20px;
+    
+  }
+
+.header-row {
+    display: flex;
+    justify-content: space-between; /* spreads them apart */
+    align-items: center; /* aligns them vertically */
+    margin: 50px;
+}
+  
+.sidenav a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .sidenav a:visited {
+    color: black;
+  }
+  
+  .sidenav a:hover {
+    color: gray; /* optional: change on hover */
+  }
+  
+  .sidenav a:active {
+    color: black;
+  }
+  
