@@ -1,2 +1,2 @@
 # Wedding-Website
-Wedding Website for client
+Wedding Website for client (Only functionality, unfinished frontend)
